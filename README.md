@@ -74,6 +74,7 @@ Layers:
        This layer contains the data access logic (e.g., Entity Framework Core implementations of repositories) and external services.
 
 Why Clean Architecture?
+
              1.Separation of Concerns: Each layer is responsible for specific tasks, reducing interdependencies and making the code more maintainable.
 
              2.Testability: By separating business logic into the Application Layer, you can easily mock dependencies and write unit tests for your handlers and services.
