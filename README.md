@@ -53,35 +53,35 @@ This project follows a clean architecture approach, where responsibilities are s
 Layers:
 1. API Layer (Presentation Layer):
 
-This layer contains the controllers that handle incoming HTTP requests. Each controller method processes the incoming request, uses MediatR to send commands/queries, and returns responses (DTOs).
+       This layer contains the controllers that handle incoming HTTP requests. Each controller method processes the incoming request, uses MediatR to send commands/queries, and returns responses (DTOs).
 
 2. Application Layer:
 
-This layer contains the business logic of the application and is responsible for orchestrating the behavior of the system through commands, queries, and handlers.
+       This layer contains the business logic of the application and is responsible for orchestrating the behavior of the system through commands, queries, and handlers.
 
-Commands like CreateOrderCommand, UpdateOrderCommand, and DeleteOrderCommand represent requests to modify the state of the system.
+       Commands like CreateOrderCommand, UpdateOrderCommand, and DeleteOrderCommand represent requests to modify the state of the system.
 
-Query handlers like GetOrdersQueryHandler fetch the requested data, while the handler processes the data and returns it to the client (in the form of DTOs).
+       Query handlers like GetOrdersQueryHandler fetch the requested data, while the handler processes the data and returns it to the client (in the form of DTOs).
 
 3. Domain Layer:
 
-This layer contains the core business domain models and the rules that govern their behavior. It includes entities like Order, OrderDetail, and repositories like IOrderRepository.
+       This layer contains the core business domain models and the rules that govern their behavior. It includes entities like Order, OrderDetail, and repositories like IOrderRepository.
 
-Repositories are used to interact with the database.
+       Repositories are used to interact with the database.
 
 4. Infrastructure Layer:
 
-This layer contains the data access logic (e.g., Entity Framework Core implementations of repositories) and external services.
+       This layer contains the data access logic (e.g., Entity Framework Core implementations of repositories) and external services.
 
 Why Clean Architecture?
-1.Separation of Concerns: Each layer is responsible for specific tasks, reducing interdependencies and making the code more maintainable.
+             1.Separation of Concerns: Each layer is responsible for specific tasks, reducing interdependencies and making the code more maintainable.
 
-2.Testability: By separating business logic into the Application Layer, you can easily mock dependencies and write unit tests for your handlers and services.
+             2.Testability: By separating business logic into the Application Layer, you can easily mock dependencies and write unit tests for your handlers and services.
 
-3.Flexibility: This architecture allows you to replace or update specific components (e.g., swapping the database or changing how commands are processed) without affecting the entire application.
+              3.Flexibility: This architecture allows you to replace or update specific components (e.g., swapping the database or changing how commands are processed) without affecting the entire application.
 
-4.Dependency Injection (DI)
-The application uses Dependency Injection (provided by ASP.NET Core) to inject dependencies such as services and repositories into the controllers and handlers.
+             4.Dependency Injection (DI)
+               The application uses Dependency Injection (provided by ASP.NET Core) to inject dependencies such as services and repositories into the controllers and handlers.
 
 MediatR
 MediatR is used to handle commands and queries in a decoupled way. Commands like CreateOrderCommand, UpdateOrderCommand, and DeleteOrderCommand are sent through MediatR to their respective handlers, making the code more modular and easier to maintain.
