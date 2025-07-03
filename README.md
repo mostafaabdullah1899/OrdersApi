@@ -14,7 +14,7 @@ To set up the project locally, follow the steps below:
 
 ### Prerequisites
 Ensure you have the following installed on your machine:
-- .NET 6.0 (or higher) SDK: [Install .NET SDK](https://dotnet.microsoft.com/download)
+- .NET 9.0 (or higher) SDK: [Install .NET SDK](https://dotnet.microsoft.com/download)
 - SQL Server (or any relational database of your choice)
 - Visual Studio or any other code editor (VS Code, JetBrains Rider)
 
