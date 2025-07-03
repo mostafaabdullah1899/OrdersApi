@@ -94,7 +94,7 @@ Repository Pattern
 The Repository Pattern is used to abstract data access logic from the rest of the application. The IOrderRepository and its implementation provide methods for interacting with the database without exposing database-specific logic to the rest of the application.
 
 Technologies Used
-.NET 6.0: The backend framework for building the RESTful API.
+.NET 9.0: The backend framework for building the RESTful API.
 
 Entity Framework Core: ORM used for database access.
 
